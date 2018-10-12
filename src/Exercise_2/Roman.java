@@ -27,8 +27,8 @@ public class Roman {
          * equal to 1000. If the numeral starts with cm 900 is added to the
          * numeralDecimal variable and all patterns of dm are replaced with "".
          * If the numeral starts with m a for loop iterates 3 times and if the
-         * numeral starts with m 1000 is added to the numeralDecimal variable.
-         * After the for loop ends all m's in the numeral are replaced with ""*/
+         * numeral starts with m 1000 is added to the numeralDecimal variable
+         * and the first m in the numeral is replaced with ""*/
         if (testNumeral.startsWith("cm")){
             numeralDecimal += 900;
             testNumeral = testNumeral.replaceAll("cm", "");
@@ -64,8 +64,8 @@ public class Roman {
          * equal to 100. If the numeral starts with xc 90 is added to the
          * numeralDecimal variable and all patterns of xc are replaced with "".
          * If the numeral starts with c a for loop iterates 3 times and if the
-         * numeral starts with c 100 is added to the numeralDecimal variable.
-         * After the for loop ends all c's in the numeral are replaced with ""*/
+         * numeral starts with c 100 is added to the numeralDecimal variable
+         * and the first c in the numeral is replaced with ""*/
         if (testNumeral.startsWith("xc")){
             numeralDecimal += 90;
             testNumeral = testNumeral.replaceAll("xc", "");
@@ -101,8 +101,8 @@ public class Roman {
          * equal to 10. If the numeral starts with ix 9 is added to the
          * numeralDecimal variable and all patterns of ix are replaced with "".
          * If the numeral starts with x a for loop iterates 3 times and if the
-         * numeral starts with x 10 is added to the numeralDecimal variable.
-         * After the for loop ends all x's in the numeral are replaced with ""*/
+         * numeral starts with x 10 is added to the numeralDecimal variable
+         * and the first x in the numeral is replaced with ""*/
         if (testNumeral.startsWith("ix")){
             numeralDecimal += 9;
             testNumeral = testNumeral.replaceAll("ix", "");
@@ -136,8 +136,7 @@ public class Roman {
          * The if statement check to see if the entered roman numeral starts with
          * i which is equal to 1. If the numeral starts with i a for loop iterates
          * 3 times and if the numeral starts with i 1 is added to the numeralDecimal
-         * variable. After the for loop ends all i's in the numeral are
-         * replaced with "".
+         * variable and the first i in the numeral is replaced with "".
          * */
         if(testNumeral.startsWith("i")){
             for (int i = 0; i < 3; i++){
