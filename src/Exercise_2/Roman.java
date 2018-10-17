@@ -1,9 +1,6 @@
 package Exercise_2;
 
-
-
 public class Roman {
-
 
     /** The decimal values of the roman numerals...
      * M = 1000
@@ -15,11 +12,56 @@ public class Roman {
      * I = 1
      * */
 
+    //Roman class variables...
+    private String romanNumeral;
+    private int romanNumeralDecimal = 0;
 
-    //Methods...
-    public int romanToDecimal(String uInputNumeral){
+    //Roman class CONSTRUCTOR...
+    public Roman(String romanNumeral){
+        /**
+         * The Roman class constructor passes an string variable
+         * as its parameter and sets the Roman class private string
+         * variable as the string variable passed in the parameter
+         * using the (this.) keyword...
+         * */
+        this.romanNumeral = romanNumeral;
+    }
+
+    //Roman class getters and setters...
+    //This method returns the value of the romanNumeral string variable...
+    public String getRomanNumeral() {
+        return romanNumeral;
+    }
+    //This method sets the value of the romanNumeral string variable...
+    public void setRomanNumeral(String romanNumeral) {
+        this.romanNumeral = romanNumeral;
+    }
+    //This method returns the value of the romanNumeralDecimal int variable...
+    public int getRomanNumeralDecimal() {
+        return romanNumeralDecimal;
+    }
+    //This method sets the value of the romanNumeralDecimal int variable...
+    public void setRomanNumeralDecimal(int romanNumeralDecimal) {
+        this.romanNumeralDecimal = romanNumeralDecimal;
+    }
+
+
+    /**
+     * This method uses a series of if statements and some for loops
+     * to convert the romanNumeral string variable in to its decimal
+     * value and store it into the romanNumeralDecimal int variable.
+     * The method then returns value of the getRomanNumeralDecimal()
+     * method...
+     * */
+    public int romanToDecimal(){
+        /**
+         * This method has a numeralDecimal int variable that is used to collect
+         * the value of the Roman Numeral. A testNumeral string variable that is
+         * assigned the return value of the getRomanNumeral() method that is used
+         * in the if/else statements to filter through the entered Roman Numeral.
+         * */
         int numeralDecimal = 0;
-        String testNumeral = uInputNumeral.toLowerCase();
+        String testNumeral = getRomanNumeral().toLowerCase();
 
         /**
          * The if statement check to see if the entered roman numeral starts with
@@ -115,6 +157,7 @@ public class Roman {
             }
         }
 
+
         /**
          * The if statement check to see if the entered roman numeral starts with
          * iv which is equal to 4, else if the roman numeral starts with v which is
@@ -146,9 +189,15 @@ public class Roman {
                 }
             }
         }
-        System.out.println("You entered Roman Numeral " + uInputNumeral.toUpperCase() + " Its decimal value is " + numeralDecimal);
-        return numeralDecimal;
-    }
 
+        /**
+         * The romanNumeralDecimal int variable is assigned the value of the
+         * numeralDecimal int variable using the setRomanNumeralDecimal() method
+         * and the method returns the return value of the getRomanNumeralDecimal()
+         * method...
+         * */
+        setRomanNumeralDecimal(numeralDecimal);
+        return getRomanNumeralDecimal();
+    }
 
 }
